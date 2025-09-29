@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Player.App
 {
-    internal class class1
+    public class Class1
     {
         int x;
     }
