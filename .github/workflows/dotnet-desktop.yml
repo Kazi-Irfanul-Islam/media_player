@@ -55,7 +55,7 @@ jobs:
 
     env:
       Solution_Name: src/MediaPlayer.sln
-      Wap_Project_Directory: src/MediaPlayer.Package      # Adjust to your WAP project folder
+      Wap_Project_Directory: src/MediaPlayer.Package
       Wap_Project_Path: src/MediaPlayer.Package/MediaPlayer.Package.wapproj
       Pfx_FileName: GitHubActionsWorkflow.pfx
 
@@ -110,8 +110,5 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: MSIX Package
-        path: ${{ env.Wap_Project_Directory }}\AppPackages
-
-        name: MSIX Package
-        path: ${{ env.Wap_Project_Directory }}\AppPackages
+        name: MSIX_Package        # ✅ Unique key
+        path: ${{ env.Wap_Project_Directory }}\AppPackages   # ✅ Unique key
